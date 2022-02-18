@@ -1,7 +1,6 @@
 2) Write a SELECT statement in SQL to list out all of the episodes which featured Matt Smith as the Doctor.
 <pre>
   -- ================================================
-  -- ================================================
   SET ANSI_NULLS ON
   GO
   SET QUOTED_IDENTIFIER ON
