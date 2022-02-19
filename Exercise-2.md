@@ -16,9 +16,9 @@
     -- interfering with SELECT statements.
     SET NOCOUNT ON;
 
-    SELECT epi.[SeriesNumber] AS Series, epi.[EpisodeNumber] Episode, epi.[Title] TITLE, 
-    epi.[EpisodeDate] 'DATE OF EPISODE', 
-    doc.[DoctorName] DOCTOR,
+    SELECT epi.[SeriesNumber] AS Series, epi.[EpisodeNumber] Episode, epi.[Title] Title, 
+    epi.[EpisodeDate] 'Date Of Episode', 
+    doc.[DoctorName] Doctor,
     aut.[AuthorName] Author
     FROM [dbo].[tblEpisode] epi
     INNER JOIN [dbo].[tblDoctor] doc ON epi.[DoctorId] = doc.[DoctorId] 
