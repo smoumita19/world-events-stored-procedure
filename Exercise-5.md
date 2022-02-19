@@ -21,7 +21,6 @@ those episodes featuring Matt Smith made in 2012, using this syntax in the WHERE
     -- interfering with SELECT statements.
     SET NOCOUNT ON;
 
-      -- Insert statements for procedure here
     SELECT epi.SeriesNumber, epi.EpisodeNumber, epi.Title , epi.EpisodeDate, doc.DoctorName
     FROM tblEpisode epi
     INNER JOIN tblDoctor doc
