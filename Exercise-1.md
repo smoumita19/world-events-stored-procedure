@@ -20,7 +20,6 @@
     -- interfering with SELECT statements.
     SET NOCOUNT ON;
 
-      -- Insert statements for procedure here
     SELECT c.CountryId, c.CountryName
     FROM tblCountry c
     WHERE c.ContinentId = 1
