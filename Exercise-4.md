@@ -19,7 +19,6 @@
     -- interfering with SELECT statements.
     SET NOCOUNT ON;
 
-      -- Insert statements for procedure here
     SELECT epi.Title 
     FROM tblEpisode epi
     INNER JOIN tblAuthor aut
