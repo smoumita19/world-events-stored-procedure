@@ -28,9 +28,7 @@ the 3 most frequently-appearing enemies.
     FROM tblEpisodeCompanion epiComp
     INNER JOIN tblCompanion comp
     ON comp.CompanionId = epiComp.CompanionId
-    ORDER BY OccurenceNumber DESC
-    --LIMIT 3
-    ;
+    ORDER BY OccurenceNumber DESC;
 
     SELECT 
     DISTINCT TOP 3 (ene.EnemyName),
@@ -38,9 +36,7 @@ the 3 most frequently-appearing enemies.
     FROM tblEpisodeEnemy epiEne
     INNER JOIN tblEnemy ene
     ON ene.EnemyId = epiEne.EnemyId
-    ORDER BY OccurenceNumber DESC
-    --LIMIT 3
-    ;
+    ORDER BY OccurenceNumber DESC;
 
   END
   GO
@@ -73,7 +69,7 @@ the 3 most frequently-appearing enemies.
       SELECT CompanionId, COUNT(epiComp.CompanionId) countComp
       FROM tblEpisodeCompanion epiComp
       GROUP BY CompanionId
-      ) SUBTABLE
+    ) SUBTABLE
     ON comp.CompanionId = SUBTABLE.CompanionId
     ORDER BY CountComp DESC;
 
